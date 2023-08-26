@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background-color: red;
+    overflow: hidden;
+}
+
+.gameContainer{
+    background-image: url(bg.webp);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.mario{
+    background-image: url(mario.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    bottom:2cm;
+    left: 52px;
+}
+
+.fallenmario {
+    background-image: url(fallenmario.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px; 
+    height: 80px; 
+    position: absolute;
+    bottom: 2cm;
+    display: none; 
+}
+
+.gameOverContainer {
+    position: relative;
+    text-align: center;
+    display: none;
+}
+
+.gameOverImage {
+    max-width: 20%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.gameOverText {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute; 
+    top:45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.obstacle{
+    width: 150px;
+    height: 150px;
+    background-image: url(browser.gif);
+    background-size: cover;
+    position: absolute;
+    bottom: 2.2cm;
+    left: 44vw;
+}
+
+.animateMario{
+    animation: mario 0.6s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver{
+    position: relative;
+    top:90px;
+    font-size: 45px;
+    text-align: center; 
+    font-family: 'Press Start 2P', cursive;
+}
+
+#scoreCont{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 25px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 10px;
+}
+
+.controls{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    left: 150px;
+    top: 25px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    text-align: left;
+}
+
+.controls {
+    text-align: center;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+li{
+    margin-bottom: 5px;
+}
+
+.name{
+    font-size: 15px;
+    color: rgb(1, 73, 22);
+    font-weight: bold;
+    position: absolute;
+    right: 260px;
+    top: 84%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@keyframes mario{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
